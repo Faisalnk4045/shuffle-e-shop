@@ -3,10 +3,14 @@ import { useState } from "react";
 import { Link, useHistory, useLocation } from 'react-router-dom';
 import useAuth from '../hooks/useAuth';
 
-const Login = () => {
+const Registration = () => {
+    const [name, setName] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
 
+    const handleNameField = event => {
+        setName(event.target.value);
+    }
     const handleEmailField = event => {
         setEmail(event.target.value);
     }
@@ -14,24 +18,31 @@ const Login = () => {
         setPassword(event.target.value);
     }
 
-    const { processLogin, error } = useAuth();
+    const { createNewAccount, error, setError } = useAuth();
     const location = useLocation();
     const history = useHistory();
     const redirect_url = location.state?.from || '/';
 
-
     const handleRegistration = (event) => {
         event.preventDefault();
-        processLogin(email, password, history, redirect_url);
+        if (password.length < 6) {
+            setError('type a 6 char long password');
+            return;
+        }
+        createNewAccount(email, password, name, history, redirect_url)
     }
     return (
         <div className='d-flex justify-content-center mt-5'>
             <div className="card p-3">
                 <div className="card-body">
                     <div className="text-center mb-4">
-                        <h4 className="card-title">Sign In</h4>
+                        <h4 className="card-title">Sign Up</h4>
                     </div>
                     <form onSubmit={handleRegistration}>
+                        <div className="mb-3">
+                            <label htmlFor="inputName" className="form-label">Name</label>
+                            <input type="text" onBlur={handleNameField} className="form-control" id="inputName" required />
+                        </div>
                         <div className="mb-3">
                             <label htmlFor="inputEmail3" className="form-label">Email address</label>
                             <input onBlur={handleEmailField} type="email" className="form-control" id="inputEmail3" required />
@@ -41,8 +52,8 @@ const Login = () => {
                             <input onBlur={handlePasswordField} type="password" className="form-control" id="inputPassword3" required />
                             <p className='text-danger'>{error}</p>
                         </div>
-                        <p className='text-muted'>New member? <span><Link className='text-danger text-decoration-none' to='/register'> Sign up now</Link></span></p>
-                        <button type="submit" className="btn btn-success btn-sm w-100">Sign In</button>
+                        <p className='text-muted'>Already have an account? <span><Link className='text-danger text-decoration-none' to='/login'> Sign in now</Link></span></p>
+                        <button type="submit" className="btn btn-success btn-sm w-100">Sign up</button>
                     </form>
                 </div>
 
@@ -51,4 +62,4 @@ const Login = () => {
     );
 };
 
-export default Login;
+export default Registration;

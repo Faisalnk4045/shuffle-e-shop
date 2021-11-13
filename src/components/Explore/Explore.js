@@ -1,16 +1,14 @@
 import React from 'react';
 import NavBar from '../NavBar/NavBar';
 import OurProducts from '../OurProducts/OurProducts';
-import Reviews from '../Reviews/Reviews';
 
-const Home = () => {
+const Explore = () => {
     return (
         <div>
             <NavBar></NavBar>
-            <OurProducts page='home'></OurProducts>
-            <Reviews></Reviews>
+            <OurProducts page='explore'></OurProducts>
         </div>
     );
 };
 
-export default Home;
+export default Explore;
