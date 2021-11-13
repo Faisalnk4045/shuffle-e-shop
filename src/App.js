@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import './App.css';
 import Dashboard from './components/Dashboard/Dashboard';
 import Explore from './components/Explore/Explore';
+import Footer from './components/Footer/Footer';
 import Home from './components/Home/Home';
 import Login from './components/Login/Login';
 import NavBar from './components/NavBar/NavBar';
@@ -32,15 +33,18 @@ function App() {
           <PrivateRoute path='/placeOrder/:productId'>
             <NavBar></NavBar>
             <PlaceOrder></PlaceOrder>
+            <Footer></Footer>
           </PrivateRoute>
 
           <Route path='/login'>
             <NavBar></NavBar>
             <Login></Login>
+            <Footer></Footer>
           </Route>
           <Route path='/register'>
             <NavBar></NavBar>
             <Registration></Registration>
+            <Footer></Footer>
           </Route>
 
           <Route path='*'>
