@@ -30,6 +30,7 @@ function App() {
             <Dashboard></Dashboard>
           </PrivateRoute>
           <PrivateRoute path='/placeOrder/:productId'>
+            <NavBar></NavBar>
             <PlaceOrder></PlaceOrder>
           </PrivateRoute>
 
