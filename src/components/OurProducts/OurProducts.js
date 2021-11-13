@@ -26,7 +26,11 @@ const OurProducts = ({ page }) => {
     }
 
     return (
-        <div className='container mt-5'>
+        <div className='container pb-5'>
+            <div className='text-center mb-5 pt-5 pb-1'>
+                <h6 style={{ color: 'rgb(197,168,128)' }}>AWESOME PRODUCTS</h6>
+                <h1>{page === 'home' ? 'Featured' : 'Explore All'} Products</h1>
+            </div>
             <Row xm={1} md={2} lg={(page === 'home') ? 3 : 4} className="g-4">
                 {
                     products.length > 0 ?
