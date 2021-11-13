@@ -31,9 +31,9 @@ const Footer = () => {
                     <Col className='mb-3'>
                         <h4 className='mb-3 fw-bold'>Follow Us</h4>
                         <p className='fs-4'>
-                            <i class="fab fa-facebook-f"></i>
-                            <i class="fab fa-instagram mx-3"></i>
-                            <i class="fab fa-twitter"></i>
+                            <i className="fab fa-facebook-f"></i>
+                            <i className="fab fa-instagram mx-3"></i>
+                            <i className="fab fa-twitter"></i>
                         </p>
                         <h4 className='mt-4 mb-3 fw-bold'>Location</h4>
                         <p>Halishahar | Chattogram</p>

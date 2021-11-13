@@ -19,7 +19,7 @@ const Dashboard = () => {
         setToggle(!toggle);
     }
 
-    const { admin, logOut } = useAuth();
+    const { user, admin, logOut } = useAuth();
 
     return (
         <div id="dashboard">
@@ -78,7 +78,10 @@ const Dashboard = () => {
                             <div className="collapse navbar-collapse" id="navbarSupportedContent">
                                 <ul className="nav navbar-nav ms-auto">
                                     <li className="nav-item active">
-                                        <span className="nav-link"><Link to={'/home'}>Home</Link></span>
+                                        <span className="nav-link"><Link to={'/home'}><i className="fas fa-home"></i> Home</Link></span>
+                                    </li>
+                                    <li className="nav-item active">
+                                        <span className="nav-link"><Link to={'/home'}><i className="fas fa-user"></i> {user.displayName}</Link></span>
                                     </li>
                                 </ul>
                             </div>
