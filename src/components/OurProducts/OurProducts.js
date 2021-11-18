@@ -14,7 +14,7 @@ const OurProducts = ({ page }) => {
             .then(res => res.json())
             .then(data => {
                 if (page === 'home')
-                    setProducts(data.slice(0, 6));
+                    setProducts(data.slice(0, 8));
                 else
                     setProducts(data);
             })
@@ -31,7 +31,7 @@ const OurProducts = ({ page }) => {
                 <h6 style={{ color: 'rgb(197,168,128)' }}>AWESOME PRODUCTS</h6>
                 <h1>{page === 'home' ? 'Featured' : 'Explore All'} Products</h1>
             </div>
-            <Row xm={1} md={2} lg={(page === 'home') ? 3 : 4} className="g-4">
+            <Row xm={1} md={2} lg={4} className="g-4">
                 {
                     products.length > 0 ?
                         products.map(product => <Product
