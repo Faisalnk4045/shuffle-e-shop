@@ -1,6 +1,7 @@
 import { Container, Navbar } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import useAuth from '../hooks/useAuth';
+import img from '../../images/logo.png';
 
 const NavBar = () => {
     const { user, logOut } = useAuth();
@@ -9,7 +10,7 @@ const NavBar = () => {
         <div className='border-bottom'>
             <Navbar collapseOnSelect expand="lg" bg="light" variant="light">
                 <Container className='py-1'>
-                    <Navbar.Brand className='fs-3 fw-bold text-dark ms-2' style={{ fontFamily: 'Charmonman' }}>Shuffle</Navbar.Brand>
+                    <Navbar.Brand className='fs-3 fw-bold text-dark ms-2' style={{ fontFamily: 'Charmonman' }}><img style={{ width: '70px', height: 'auto', filter: 'invert(1)' }} src={img} alt="" /></Navbar.Brand>
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                     <Navbar.Collapse id="responsive-navbar-nav">
                         <nav className="ms-lg-5 me-auto">
