@@ -42,7 +42,7 @@ const UserReview = () => {
                     <textarea defaultValue="" {...register("description")} type="text" className="form-control" id="forDescription" />
                 </div>
                 <div className="mb-3">
-                    <label htmlFor="forPrice" className="form-label">Rating (1-5)</label>
+                    <label htmlFor="forPrice" className="form-label">Rating (0-5)</label>
                     <input defaultValue="" {...register("rating")} type="text" className="form-control" id="forPrice" />
                 </div>
                 <input className="btn btn-dark w-100" type="submit" value="Submit Review" />
