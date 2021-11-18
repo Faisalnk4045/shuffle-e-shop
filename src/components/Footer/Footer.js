@@ -14,29 +14,29 @@ const Footer = () => {
                     </Col>
                     <Col className='mb-3'>
                         <h4 className='mb-3 fw-bold'>Products</h4>
-                        <p>View All</p>
-                        <p>Special Offers</p>
-                        <p>Pricing</p>
-                        <p>Reviews</p>
-                        <p>Best Value</p>
+                        <p><small><i>View All</i></small></p>
+                        <p><small><i>Special Offers</i></small></p>
+                        <p><small><i>Pricing</i></small></p>
+                        <p><small><i>Reviews</i></small></p>
+                        <p><small><i>Best Value</i></small></p>
                     </Col>
                     <Col className='mb-3'>
                         <h4 className='mb-3 fw-bold'>Company</h4>
-                        <p>About</p>
-                        <p>Terms & Conditions</p>
-                        <p>Privacy Policy</p>
-                        <p>Press Center</p>
-                        <p>Careers</p>
+                        <p><small><i>About</i></small></p>
+                        <p><small><i>Terms & Conditions</i></small></p>
+                        <p><small><i>Privacy Policy</i></small></p>
+                        <p><small><i>Press Center</i></small></p>
+                        <p><small><i>Careers</i></small></p>
                     </Col>
                     <Col className='mb-3'>
                         <h4 className='mb-3 fw-bold'>Follow Us</h4>
-                        <p className='fs-4'>
+                        <p>
                             <i className="fab fa-facebook-f"></i>
                             <i className="fab fa-instagram mx-3"></i>
                             <i className="fab fa-twitter"></i>
                         </p>
-                        <h4 className='mt-4 mb-3 fw-bold'>Location</h4>
-                        <p>Halishahar | Chattogram</p>
+                        <h4 className='mt-5 mb-3 fw-bold'>Location</h4>
+                        <p><small><i>Halishahar | Chattogram</i></small></p>
                     </Col>
                 </Row>
                 <hr />
